@@ -5,8 +5,9 @@ const QURAN_API = 'https://api.alquran.cloud/v1';
 
 export const getPrayerTimes = async (city: string): Promise<{ city: string; times: PrayerTimes; date: string } | null> => {
   try {
+    const encodedCity = encodeURIComponent(city);
     const response = await fetch(
-      `${ALADHAN_API}/timingsByCity?city=${encodeURIComponent(city)}&country=Indonesia`
+      `${ALADHAN_API}/timingsByCity?city=${encodedCity}&country=Indonesia`
     );
     const data = await response.json();
     
