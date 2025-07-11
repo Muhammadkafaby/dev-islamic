@@ -5,7 +5,9 @@ const QURAN_API = 'https://api.alquran.cloud/v1';
 
 export const getPrayerTimes = async (city: string): Promise<{ city: string; times: PrayerTimes; date: string } | null> => {
   try {
-    const response = await fetch(`${ALADHAN_API}/timingsByCity?city=${city}&country=Indonesia`);
+    const response = await fetch(
+      `${ALADHAN_API}/timingsByCity?city=${encodeURIComponent(city)}&country=Indonesia`
+    );
     const data = await response.json();
     
     if (data.code === 200) {
@@ -121,7 +123,7 @@ export const searchQuran = async (query: string): Promise<QuranSearchResult[]> =
             englishName: match.surah.englishName
           }
         },
-        matches: [query]
+        matches: match.matches ? match.matches : [match.text]
       }));
     }
     return [];
