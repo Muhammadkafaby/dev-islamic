@@ -5,7 +5,7 @@ export const dailyDuas: Dua[] = [
     title: "Doa Bangun Tidur",
     arabic: "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
     translation: "Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami dan kepada-Nya kebangkitan.",
-    transliteration: "Alhamdulillahilladzi ahyaana ba'da maa amaatanaa wa ilaihin nusyuur"
+    transliteration: "Alhamdulillahilladzi ahyaana ba'da maa amaatanaa wa ilaihin nushur"
   },
   {
     title: "Doa Sebelum Makan",
