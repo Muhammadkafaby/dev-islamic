@@ -7,7 +7,9 @@ Ini adalah implementasi awal aplikasi Dev Islamic versi mobile menggunakan React
 - **Navigasi Tab**: Sholat, Quran, Jadwal, Komunitas, AI Assistant.
 - **Penanda Waktu Sholat**: Otomatis mengambil lokasi pengguna dan menampilkan waktu sholat menggunakan API [Aladhan](https://aladhan.com/prayer-times-api).
 - **AI Assistant**: Layar percakapan sederhana dengan API GPT untuk menjawab pertanyaan seputar Islam.
-- Halaman lain masih berupa placeholder dan dapat dikembangkan lebih lanjut.
+- **Ayat Harian**: Widget yang menampilkan ayat Al-Qur'an secara acak setiap kali dibuka.
+- **Jadwal Hijriah**: Menampilkan tanggal hijriah hari ini pada menu Jadwal.
+- **Halal Scanner & Mode Anak**: Akses dari tab Komunitas dengan navigasi terpisah.
 
 ## Menjalankan
 

@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SholatScreen from '../screens/SholatScreen';
 import QuranScreen from '../screens/QuranScreen';
 import ScheduleScreen from '../screens/ScheduleScreen';
-import CommunityScreen from '../screens/CommunityScreen';
+import CommunityNavigator from './CommunityNavigator';
 import AssistantScreen from '../screens/AssistantScreen';
 import { MosqueIcon, QuranIcon, CalendarIcon, CommunityIcon, ChatIcon } from '../components/Icons';
 
@@ -16,6 +16,7 @@ const AppTheme = {
     ...DefaultTheme.colors,
     primary: '#10b981',
     background: '#ffffff',
+    card: '#f0fdf4',
   },
 };
 
@@ -26,6 +27,7 @@ const TabNavigator = () => (
         headerShown: false,
         tabBarActiveTintColor: '#10b981',
         tabBarInactiveTintColor: '#94a3b8',
+        tabBarStyle: { backgroundColor: '#f0fdf4', borderTopColor: '#d1fae5' },
         tabBarIcon: ({ color, size }) => {
           switch (route.name) {
             case 'Sholat':
@@ -47,7 +49,7 @@ const TabNavigator = () => (
       <Tab.Screen name="Sholat" component={SholatScreen} />
       <Tab.Screen name="Quran" component={QuranScreen} />
       <Tab.Screen name="Jadwal" component={ScheduleScreen} />
-      <Tab.Screen name="Komunitas" component={CommunityScreen} />
+      <Tab.Screen name="Komunitas" component={CommunityNavigator} />
       <Tab.Screen name="AI Assistant" component={AssistantScreen} />
     </Tab.Navigator>
   </NavigationContainer>
